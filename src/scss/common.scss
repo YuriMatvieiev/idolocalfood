@@ -9,6 +9,12 @@
   box-shadow: 4px 5px 10px 0px rgba(156, 38, 48, 0.2);
   border: 2px solid $orange;
   text-align: center;
+  transition: border 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: #fff;
+    }
+  }
 }
 .sub-button {
   color: $orange;
@@ -20,4 +26,11 @@
   border: 2px solid $orange;
   box-shadow: 4px 5px 10px 0px rgba(156, 38, 48, 0.2);
   text-align: center;
+  transition: border, color 0.3s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: $red;
+      color: $red;
+    }
+  }
 }

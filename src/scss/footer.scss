@@ -10,6 +10,7 @@
     @include adaptiveValue("padding-bottom", 90, 35);
     background-color: rgba(35, 35, 35, 0.85);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     height: 100%;
     width: 100%;
   }
@@ -40,8 +41,14 @@
         padding: 9px;
         border: 2px solid #fff;
         display: inline-block;
+        transition: border 0.3s ease;
         @media (max-width: $mobile) {
           padding: 7px;
+        }
+        @media (any-hover: hover) {
+          &:hover {
+            border: 2px solid $orange;
+          }
         }
       }
     }
@@ -63,6 +70,12 @@
         font-weight: 600;
         text-transform: uppercase;
         @include adaptiveValue("line-height", 29, 25);
+        transition: color 0.3s ease;
+        @media (any-hover: hover) {
+          &:hover {
+            color: $orange;
+          }
+        }
       }
     }
   }
@@ -79,6 +92,14 @@
       &:not(:first-child) {
         padding-left: 5px;
         border-left: 1px solid #fff;
+      }
+      a {
+        transition: color 0.3s ease;
+        @media (any-hover: hover) {
+          &:hover {
+            color: $orange;
+          }
+        }
       }
     }
   }
