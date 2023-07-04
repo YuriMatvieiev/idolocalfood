@@ -1,0 +1,23 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.main-button {
+  color: #fff;
+  @include adaptiveValue("font-size", 20, 16);
+  font-weight: 600;
+  text-transform: uppercase;
+  @include adaptiveValue("line-height", 25, 20);
+  background-color: $orange;
+  box-shadow: 4px 5px 10px 0px rgba(156, 38, 48, 0.2);
+  border: 2px solid $orange;
+  text-align: center;
+}
+.sub-button {
+  color: $orange;
+  @include adaptiveValue("font-size", 20, 16);
+  font-weight: 600;
+  text-transform: uppercase;
+  @include adaptiveValue("line-height", 25, 20);
+  background: #fff;
+  border: 2px solid $orange;
+  box-shadow: 4px 5px 10px 0px rgba(156, 38, 48, 0.2);
+  text-align: center;
+}

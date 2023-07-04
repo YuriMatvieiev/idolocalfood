@@ -1,0 +1,114 @@
+//====================================================================================================
+
+.hero {
+  @include adaptiveValue("padding-top", 78, 5);
+  @include adaptiveValue("padding-bottom", 127, 80);
+
+  // .hero__banner
+  &__banner {
+    position: absolute;
+    right: -201px;
+    top: -190px;
+    @include adaptiveValue("width", 918, 440);
+    z-index: -1;
+    @media (max-width: $mobile) {
+      top: 280px;
+      @include adaptiveValue("top", 130, 280, 0, 767.98, 375);
+      right: 50%;
+      transform: translate(50%, 0);
+    }
+  }
+  // .hero__container
+  &__container {
+    position: relative;
+  }
+  // .hero__text
+  &__text {
+    @include adaptiveValue("max-width", 638, 570, 0, 1200, 767.98);
+    margin-bottom: rem(70);
+    @media (max-width: $mobile) {
+      max-width: unset;
+      text-align: center;
+      margin-bottom: rem(276);
+    }
+  }
+  // .hero__title
+  &__title {
+    @include adaptiveValue("font-size", 50, 30);
+    font-weight: 600;
+    font-family: "Noto Serif";
+    text-transform: uppercase;
+    @include adaptiveValue("line-height", 68, 41);
+    @include adaptiveValue("margin-bottom", 60, 30);
+    span {
+      color: $red;
+    }
+  }
+  // .hero__buttons
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @media (max-width: $mobile) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  // .hero__main-button
+  &__main-button {
+    padding: 23px 20px;
+    @include adaptiveValue("width", 270, 220);
+    @media (max-width: $mobile) {
+      padding: 15px 20px;
+    }
+  }
+  // .hero__sub-button
+  &__sub-button {
+    padding: 23px 20px;
+    @include adaptiveValue("width", 270, 220);
+    @media (max-width: $mobile) {
+      padding: 15px 20px;
+    }
+  }
+  // .hero__fact
+  &__fact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 30px 0px rgba(156, 38, 48, 0.2);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 17px 0;
+    width: 100%;
+    flex-wrap: wrap;
+    @include adaptiveValue("gap", 100, 25, 0, 1200, 767.98);
+    @media (max-width: $mobile) {
+      padding: 28px 38px;
+    }
+  }
+  // .hero__fact-item
+  &__fact-item {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 30, 20, 0, 1200, 767.98);
+  }
+  // .hero__fact-img
+  &__fact-img {
+    @include adaptiveValue("width", 120, 50);
+  }
+  // .hero__fact-text
+  &__fact-text {
+    color: #000;
+    @include adaptiveValue("font-size", 30, 20);
+    font-weight: 600;
+    text-transform: uppercase;
+    @include adaptiveValue("line-height", 37, 25);
+    @media (max-width: $mobileSmall) {
+      max-width: 180px;
+    }
+  }
+}
+
+//====================================================================================================
